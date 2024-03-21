@@ -1,0 +1,25 @@
+# Read more on https://github.com/amannn/action-semantic-pull-request
+name: 'PR Check'
+
+on:
+  pull_request:
+    branches: [main, master]
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  title:
+    runs-on: [self-hosted, owner=cloud-platform-l4, runnerset=default-runners, env=staging, opco=tokopedia]
+
+    concurrency:
+      group: skipper-pr-title-${{ github.head_ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: semantic-pull-request
+        timeout-minutes: 3
+        uses: amannn/action-semantic-pull-request@v3.4.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

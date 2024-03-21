@@ -1,0 +1,69 @@
+.header {
+  width: 100%;
+  min-height: 50px;
+}
+
+.headerFloat {
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  width: 100%;
+  min-height: 50px;
+  padding: 8px 0;
+  background: #ffffff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 7%);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #ffffff;
+  height: 34 px;
+  border: 0;
+}
+
+.logo {
+  display: block;
+  height: 24px;
+}
+
+.title {
+  display: block;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1.25em;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  line-height: 18px;
+  margin-top: 1px;
+  margin-left: 10px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navItem a {
+  color: #0000ff;
+}
+
+.navItem a:link {
+  color: #0000ee;
+}
+
+.navItem a:visited {
+  color: #551a8b;
+}

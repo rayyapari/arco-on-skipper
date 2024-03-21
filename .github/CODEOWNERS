@@ -1,0 +1,28 @@
+# You can use a `CODEOWNERS` file to specify users that are responsible
+# for a certain part of the code in a repository.
+#
+# Format:
+# path/to/file/or/directory tokopedia_email_address #slack-user-group
+
+.husky/     miqdad.fawwaz@tokopedia.com #wpe-core
+.github/    miqdad.fawwaz@tokopedia.com #wpe-core
+
+# Type definitions
+src/@types/  miqdad.fawwaz@tokopedia.com #wpe-core
+
+# Client dir
+src/client/404/             salman.fariz@tokopedia.com #wpe-core
+src/client/_app.tsx         salman.fariz@tokopedia.com #wpe-core
+src/client/index.tsx        salman.fariz@tokopedia.com #wpe-core
+src/client/_document.tsx    salman.fariz@tokopedia.com #wpe-core
+
+# Routes dir
+src/routes/index.tsx    salman.fariz@tokopedia.com #wpe-core
+
+# Server dir
+src/server/app.tsx      salman.fariz@tokopedia.com #wpe-core
+src/server/index.tsx    salman.fariz@tokopedia.com #wpe-core
+
+# Static dir
+static/ faiz.rekatama@tokopedia.com #wpe-core
+public/ faiz.rekatama@tokopedia.com #wpe-core

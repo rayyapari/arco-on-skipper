@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCase",
+          "namedExports": true
+        }
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "dist",
+    "build",
+    "src/routes/**/*.dev.tsx",
+    "src/routes/**/*.dev.ts"
+  ],
+  "extends": "@lite-v3/tsconfig/index.json",
+  "include": [
+    "src"
+  ]
+}

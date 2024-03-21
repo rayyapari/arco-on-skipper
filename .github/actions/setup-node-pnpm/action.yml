@@ -1,0 +1,51 @@
+name: Setup Node & pnpm
+
+description: Setup Node.js, pnpm, cache and install dependencies
+
+inputs:
+  email:
+    description: 'User email'
+    required: true
+  token:
+    description: 'User personal access token'
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version-file: '.nvmrc'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@tokopedia'
+      env:
+        NPM_TOKEN: '${{ inputs.token }}'
+        NODE_AUTH_TOKEN: '${{ inputs.token }}'
+
+    - name: Setup npmrc config
+      uses: ./.github/actions/setup-registry-auth
+      with:
+        email: '${{ inputs.email }}'
+        token: '${{ inputs.token }}'
+
+    # - name: Cache pnpm modules
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: ~/.pnpm-store
+    #     key: pnpm6-arco-on-skipper-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+    #     restore-keys: |
+    #       pnpm6-arco-on-skipper-${{ runner.os }}-
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.2.3
+      with:
+        version: 8.6.12
+
+    - name: Check pnpm version
+      shell: bash
+      run: pnpm -v
+
+    - name: Run Bootstrap
+      shell: bash
+      run: pnpm install

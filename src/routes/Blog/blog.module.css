@@ -1,0 +1,36 @@
+.wrapperContent {
+  align-items: center;
+  color: var(--NN950);
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  height: 100vh;
+  justify-content: center;
+  padding: 1.428rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 2.857rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.142rem;
+  line-height: 1.5;
+  margin: 1.142rem 0 2.285rem;
+  text-align: center;
+}
+
+.ctaButton {
+  background-color: var(--GN500);
+  border: 0;
+  border-radius: 8px;
+  color: var(--NN0);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 40px;
+  padding: 0.571rem 1.142rem;
+}

@@ -1,0 +1,4 @@
+{
+  "*.{js,mjs,jsx,ts,tsx}": ["prettier --config .prettierrc --write", "eslint --fix"],
+  "*.json": ["prettier --config .prettierrc --write", "sort-package-json"]
+}

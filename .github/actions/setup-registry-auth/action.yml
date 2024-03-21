@@ -1,0 +1,30 @@
+name: Private Registry Authentication Setup
+
+description: Setup private registry connection
+
+inputs:
+  email:
+    description: "User email"
+    required: true
+  token:
+    description: "User personal access token"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup registry scope
+      shell: bash
+      run: npm set @tokopedia:registry https://npm.pkg.github.com
+
+    - name: Setup registry email
+      shell: bash
+      run: npm set email ${{ inputs.email }}
+
+    - name: Setup registry token
+      shell: bash
+      run: npm set //npm.pkg.github.com/:_authToken ${{ inputs.token }}
+
+    - name: Output
+      shell: bash
+      run: npm whoami --registry=https://npm.pkg.github.com

@@ -1,0 +1,37 @@
+{
+  "headers": [
+    {
+      "source": "**/*.@(js|css|jpg|png|bmp|jpeg|svg|webp|gif|ttf|woff)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "**/*.@(js)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    }
+  ],
+  "proxy": [
+    {
+      "source": "/graphql/*",
+      "destination": "https://gql-staging.tokopedia.com",
+      "secure": false,
+      "changeOrigin": true,
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "public": "./build/client"
+}

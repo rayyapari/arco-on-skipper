@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+assets
+
+pnpm-lock.yaml
+
+# Typescript types
+**/*.d.ts
+**/index.dev.tsx

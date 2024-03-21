@@ -1,0 +1,16 @@
+{
+  "description": "Service lite-arco-on-skipper by Skipper-Framework",
+  "app": [
+    {
+      "name": "lite-arco-on-skipper",
+      "description": "Service lite-arco-on-skipper by Skipper-Framework",
+      "owner": "dendi.sunardi@tokopedia.com",
+      "slack_channel": "mobile-web-hub"
+    }
+  ],
+  "directorate": "TECH",
+  "last_update": "21/3/2024",
+  "namespace": "tokopedia-lite",
+  "repository_name": "tokopedia-lite-arco-on-skipper",
+  "security_owner": "pradhana.indra@tokopedia.com"
+}

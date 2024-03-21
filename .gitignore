@@ -1,0 +1,35 @@
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+.pnpm-debug.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env
+.skipper
+.DS_Store
+.clinic
+
+build
+node_modules
+src/routes/index.dev.tsx
+
+newrelic.js
+newrelic_agent.log
+
+lite-codesight*.json
+
+# Test Coverage directory
+coverage
+
+# Turborepo
+/**/.turbo

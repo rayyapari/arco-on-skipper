@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=no, width=device-width"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Tokopedia Lite" />
+    <meta name="theme-color" content="#42b549" />
+    <style type="text/css">
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      a {
+        background-color: transparent;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type='button'],
+      [type='reset'],
+      [type='submit'],
+      button {
+        -webkit-appearance: button;
+      }
+      [type='button']::-moz-focus-inner,
+      [type='reset']::-moz-focus-inner,
+      [type='submit']::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      [type='button']:-moz-focusring,
+      [type='reset']:-moz-focusring,
+      [type='submit']:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type='checkbox'],
+      [type='radio'] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type='number']::-webkit-inner-spin-button,
+      [type='number']::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type='search'] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type='search']::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      details {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+    </style>
+    <style type="text/css">
+      *:focus {
+        outline: none;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+          'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        color: rgba(0, 0, 0, 0.54);
+      }
+      button {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+          'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="144x144"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon144.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon512.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="512x512"
+      href="https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/media/icons/icon512.png"
+    />
+    <style>
+      #content {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .empty-state {
+        width: 80vw;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .empty-state-image {
+        max-width: 80vw;
+      }
+
+      .empty-state-title {
+        display: block;
+        position: relative;
+        font-weight: 800;
+        font-family: 'Open Sauce One', sans-serif;
+        font-size: 1.28571rem;
+        line-height: 24px;
+        color: rgba(49, 53, 59, 0.68);
+        text-decoration: initial;
+        margin: 0px 0px 4px;
+      }
+
+      .empty-state-subtitle {
+        display: block;
+        position: relative;
+        font-weight: 400;
+        font-size: 0.857143rem;
+        line-height: 18px;
+        color: rgba(49, 53, 59, 0.68);
+        text-decoration: initial;
+        margin: 4px 0px 24px;
+      }
+
+      @keyframes shimmer-animation {
+        0% {
+          background-position: -300px;
+        }
+        100% {
+          background-position: 300px;
+        }
+      }
+
+      .shimmer-line {
+        display: block;
+        height: 8px;
+        width: 72vw;
+        background-color: rgb(239, 239, 239);
+        margin-bottom: 16px;
+        background-image: linear-gradient(89deg, rgb(239, 239, 239), rgb(224, 224, 224));
+        background-size: 99% 100%;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        animation: 1.3s linear 1ms infinite normal backwards running shimmer-animation;
+      }
+
+      .button-green {
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        height: 40px;
+        line-height: 18px;
+        width: auto;
+        font-weight: 600;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        text-indent: initial;
+        border-radius: 8px;
+        outline: none;
+        overflow: hidden;
+        padding: 0px 16px;
+        transition: background 0.8s ease 0s;
+        background: radial-gradient(circle, transparent 1%, rgb(3, 172, 14) 1%) center center / 15000% rgb(3, 172, 14);
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+      }
+
+      .button-green:active {
+        filter: brightness(110%);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript><div>Website tokopedia memerlukan javascript untuk dapat ditampilkan.</div></noscript>
+    <div id="content">
+      <div class="empty-state">
+        <img
+          class="empty-state-image"
+          alt="Koneksi Internet Terputus"
+          src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/atreus/kratos/offline-image.e86e70af.jpg"
+        />
+        <h3 class="empty-state-title">Koneksi Internet Terputus</h3>
+        <p class="empty-state-subtitle">Silahkan coba lagi</p>
+      </div>
+      <span class="shimmer-line"></span>
+      <button class="button-green" type="button" onclick="window.location.reload()">
+        <span>Coba Lagi</span>
+      </button>
+    </div>
+  </body>
+</html>

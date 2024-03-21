@@ -1,0 +1,41 @@
+.containerCx {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: 'center';
+  color: #000;
+  background: #fff;
+}
+
+.bodyCx {
+  display: flex;
+  flex-flow: row;
+}
+
+.titleCx {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 20px;
+  padding: 10px 23px 10px 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.descriptionCx {
+  display: inline-block;
+  height: 49px;
+  text-align: left;
+  line-height: 49px;
+}
+
+.textCx {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}

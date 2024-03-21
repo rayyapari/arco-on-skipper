@@ -1,0 +1,59 @@
+name: Scheduler Remove Stale Issues
+
+on:
+  schedule:
+    # https://crontab.guru/#20_18_*_*_6
+    - cron: "20 18 * * 6"
+
+jobs:
+  close-stale-issue:
+    name: Close stale issues and PRs
+    runs-on:
+      [
+        self-hosted,
+        owner=cloud-platform-l4,
+        runnerset=default-runners,
+        env=staging,
+        opco=tokopedia,
+      ]
+
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/stale@v6
+        timeout-minutes: 5
+
+        with:
+          days-before-close: 3
+          days-before-stale: 30
+          stale-pr-label: "no-pr-activity"
+          stale-issue-label: "no-issue-activity"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-pr-message: "This PR has been inactive for more than 30 days, will close in 3 days."
+          stale-issue-message: "This Issue has been inactive for more than 30 days, will close in 3 days."
+
+  prune-stale-branch:
+    name: Delete stale branch
+    runs-on:
+      [
+        self-hosted,
+        owner=cloud-platform-l4,
+        runnerset=default-runners,
+        env=staging,
+        opco=tokopedia,
+      ]
+
+    steps:
+      - uses: phpdocker-io/github-actions-delete-abandoned-branches@v1
+        id: delete-branch
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          ignore_branches: master,main
+          last_commit_age_days: 30
+          dry_run: no
+
+      - name: Output
+        run: "echo 'Deleted branches: ${{ steps.delete_stuff.outputs.deleted_branches }}'"
