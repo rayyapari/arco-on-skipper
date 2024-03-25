@@ -5,13 +5,12 @@ import type { SkipperComponentType } from '@tokopedia/skipper/router';
 
 import Main from '@/components/Main';
 
-import * as styles from './arco-nest.module.css';
+// Component(s)
+import { Button, Checkbox, Divider, Pagination, Space, Typography } from '@arco-design/web-react';
 
 // Style
 import '@arco-themes/react-nest-arco/css/arco.css';
-
-// Component(s)
-import { Button, Checkbox, Divider, Pagination, Space, Typography } from '@arco-design/web-react';
+import * as styles from './arco-nest.module.css';
 
 /**
  * @function ArcoNest

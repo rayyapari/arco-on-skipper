@@ -5,13 +5,12 @@ import type { SkipperComponentType } from '@tokopedia/skipper/router';
 
 import Main from '@/components/Main';
 
-import * as styles from './arco.module.css';
+// Component(s)
+import { Button, Checkbox, Divider, Pagination, Space, Typography } from '@arco-design/web-react';
 
 // Style
 import '@arco-design/web-react/dist/css/arco.css';
-
-// Component(s)
-import { Button, Checkbox, Divider, Pagination, Space, Typography } from '@arco-design/web-react';
+import * as styles from './arco.module.css';
 
 /**
  * @function Arco
